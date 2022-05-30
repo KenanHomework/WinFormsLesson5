@@ -1,6 +1,6 @@
 ﻿namespace WinFormsLesson5.WordPadKiller
 {
-    partial class WolfRW
+    partial class MysStat
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_selecFont = new System.Windows.Forms.Button();
             this.btn_selectColorAll = new System.Windows.Forms.Button();
             this.btn_color = new System.Windows.Forms.Button();
             this.btn_selectColor = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rtbx_text = new System.Windows.Forms.RichTextBox();
-            this.btn_selecFont = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nup_size)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control Panel";
+            // 
+            // btn_selecFont
+            // 
+            this.btn_selecFont.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selecFont.Font = new System.Drawing.Font("Agency FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn_selecFont.Location = new System.Drawing.Point(223, 86);
+            this.btn_selecFont.Name = "btn_selecFont";
+            this.btn_selecFont.Size = new System.Drawing.Size(66, 30);
+            this.btn_selecFont.TabIndex = 16;
+            this.btn_selecFont.Text = "Select";
+            this.btn_selecFont.UseVisualStyleBackColor = true;
+            this.btn_selecFont.Click += new System.EventHandler(this.btn_selecFont_Click);
             // 
             // btn_selectColorAll
             // 
@@ -303,18 +315,6 @@
             this.rtbx_text.TabIndex = 1;
             this.rtbx_text.Text = "";
             this.rtbx_text.TextChanged += new System.EventHandler(this.rtbx_text_TextChanged);
-            // 
-            // btn_selecFont
-            // 
-            this.btn_selecFont.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_selecFont.Font = new System.Drawing.Font("Agency FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btn_selecFont.Location = new System.Drawing.Point(223, 86);
-            this.btn_selecFont.Name = "btn_selecFont";
-            this.btn_selecFont.Size = new System.Drawing.Size(66, 30);
-            this.btn_selecFont.TabIndex = 16;
-            this.btn_selecFont.Text = "Select";
-            this.btn_selecFont.UseVisualStyleBackColor = true;
-            this.btn_selecFont.Click += new System.EventHandler(this.btn_selecFont_Click);
             // 
             // WolfRW
             // 

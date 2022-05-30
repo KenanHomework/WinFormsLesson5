@@ -1,3 +1,4 @@
+using WinFormsLesson5.MysStat;
 using WinFormsLesson5.WordPadKiller;
 
 namespace WinFormsLesson5
@@ -13,7 +14,7 @@ namespace WinFormsLesson5
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new WolfRW());
+            Application.Run(new MyStat());
         }
     }
 }

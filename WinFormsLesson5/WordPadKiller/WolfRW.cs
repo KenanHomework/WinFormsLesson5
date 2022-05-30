@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WinFormsLesson5.WordPadKiller
 {
-    public partial class WolfRW : Form
+    public partial class MysStat : Form
     {
-        public WolfRW()
+        public MysStat()
         {
             InitializeComponent();
             CenterToScreen();

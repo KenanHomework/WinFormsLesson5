@@ -1,0 +1,77 @@
+﻿namespace WinFormsLesson5.MysStat
+{
+    partial class MyStat
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.studentuc1 = new WinFormsLesson5.MysStat.StudentUC();
+            this.studentuc2 = new WinFormsLesson5.MysStat.StudentUC();
+            this.studentuc3 = new WinFormsLesson5.MysStat.StudentUC();
+            this.SuspendLayout();
+            // 
+            // studentuc1
+            // 
+            this.studentuc1.Location = new System.Drawing.Point(12, 12);
+            this.studentuc1.Name = "studentuc1";
+            this.studentuc1.Size = new System.Drawing.Size(1105, 122);
+            this.studentuc1.TabIndex = 0;
+            // 
+            // studentuc2
+            // 
+            this.studentuc2.Location = new System.Drawing.Point(12, 140);
+            this.studentuc2.Name = "studentuc2";
+            this.studentuc2.Size = new System.Drawing.Size(1105, 127);
+            this.studentuc2.TabIndex = 1;
+            // 
+            // studentuc3
+            // 
+            this.studentuc3.Location = new System.Drawing.Point(12, 273);
+            this.studentuc3.Name = "studentuc3";
+            this.studentuc3.Size = new System.Drawing.Size(1107, 148);
+            this.studentuc3.TabIndex = 2;
+            // 
+            // MyStat
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1131, 450);
+            this.Controls.Add(this.studentuc3);
+            this.Controls.Add(this.studentuc2);
+            this.Controls.Add(this.studentuc1);
+            this.Name = "MyStat";
+            this.Text = "MysStat";
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private StudentUC studentuc1;
+        private StudentUC studentuc2;
+        private StudentUC studentuc3;
+    }
+}
