@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_selectColorAll = new System.Windows.Forms.Button();
+            this.btn_color = new System.Windows.Forms.Button();
+            this.btn_selectColor = new System.Windows.Forms.Button();
             this.btn_saveas = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_load = new System.Windows.Forms.Button();
-            this.cbx_colors = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_AlgRight = new System.Windows.Forms.Button();
             this.btn_AlgCenter = new System.Windows.Forms.Button();
@@ -44,9 +46,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.nup_size = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbx_fonts = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rtbx_text = new System.Windows.Forms.RichTextBox();
+            this.btn_selecFont = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nup_size)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +56,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Controls.Add(this.btn_selecFont);
+            this.groupBox1.Controls.Add(this.btn_selectColorAll);
+            this.groupBox1.Controls.Add(this.btn_color);
+            this.groupBox1.Controls.Add(this.btn_selectColor);
             this.groupBox1.Controls.Add(this.btn_saveas);
             this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.btn_load);
-            this.groupBox1.Controls.Add(this.cbx_colors);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btn_AlgRight);
             this.groupBox1.Controls.Add(this.btn_AlgCenter);
@@ -69,7 +74,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.nup_size);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbx_fonts);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(-11, -37);
             this.groupBox1.Name = "groupBox1";
@@ -77,6 +81,40 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control Panel";
+            // 
+            // btn_selectColorAll
+            // 
+            this.btn_selectColorAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selectColorAll.Font = new System.Drawing.Font("Agency FB", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn_selectColorAll.Location = new System.Drawing.Point(806, 121);
+            this.btn_selectColorAll.Name = "btn_selectColorAll";
+            this.btn_selectColorAll.Size = new System.Drawing.Size(70, 29);
+            this.btn_selectColorAll.TabIndex = 15;
+            this.btn_selectColorAll.Text = "Select All";
+            this.btn_selectColorAll.UseVisualStyleBackColor = true;
+            this.btn_selectColorAll.Click += new System.EventHandler(this.btn_selectColor_Click);
+            // 
+            // btn_color
+            // 
+            this.btn_color.Enabled = false;
+            this.btn_color.Location = new System.Drawing.Point(766, 105);
+            this.btn_color.Name = "btn_color";
+            this.btn_color.Size = new System.Drawing.Size(34, 29);
+            this.btn_color.TabIndex = 14;
+            this.btn_color.UseVisualStyleBackColor = true;
+            this.btn_color.BackColorChanged += new System.EventHandler(this.btn_color_BackColorChanged);
+            // 
+            // btn_selectColor
+            // 
+            this.btn_selectColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selectColor.Font = new System.Drawing.Font("Agency FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn_selectColor.Location = new System.Drawing.Point(806, 88);
+            this.btn_selectColor.Name = "btn_selectColor";
+            this.btn_selectColor.Size = new System.Drawing.Size(70, 29);
+            this.btn_selectColor.TabIndex = 13;
+            this.btn_selectColor.Text = "Select";
+            this.btn_selectColor.UseVisualStyleBackColor = true;
+            this.btn_selectColor.Click += new System.EventHandler(this.btn_selectColor_Click);
             // 
             // btn_saveas
             // 
@@ -116,15 +154,6 @@
             this.btn_load.UseVisualStyleBackColor = true;
             this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
-            // cbx_colors
-            // 
-            this.cbx_colors.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbx_colors.FormattingEnabled = true;
-            this.cbx_colors.Location = new System.Drawing.Point(768, 90);
-            this.cbx_colors.Name = "cbx_colors";
-            this.cbx_colors.Size = new System.Drawing.Size(112, 28);
-            this.cbx_colors.TabIndex = 5;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -145,6 +174,7 @@
             this.btn_AlgRight.TabIndex = 4;
             this.btn_AlgRight.Text = "R";
             this.btn_AlgRight.UseVisualStyleBackColor = true;
+            this.btn_AlgRight.Click += new System.EventHandler(this.btn_AlgRight_Click);
             // 
             // btn_AlgCenter
             // 
@@ -156,6 +186,7 @@
             this.btn_AlgCenter.TabIndex = 4;
             this.btn_AlgCenter.Text = "C";
             this.btn_AlgCenter.UseVisualStyleBackColor = true;
+            this.btn_AlgCenter.Click += new System.EventHandler(this.btn_AlgRight_Click);
             // 
             // btn_AlgLeft
             // 
@@ -167,6 +198,7 @@
             this.btn_AlgLeft.TabIndex = 4;
             this.btn_AlgLeft.Text = "L";
             this.btn_AlgLeft.UseVisualStyleBackColor = true;
+            this.btn_AlgLeft.Click += new System.EventHandler(this.btn_AlgRight_Click);
             // 
             // label4
             // 
@@ -188,6 +220,7 @@
             this.btn_italic.TabIndex = 3;
             this.btn_italic.Text = "I";
             this.btn_italic.UseVisualStyleBackColor = true;
+            this.btn_italic.Click += new System.EventHandler(this.btn_bold_Click);
             // 
             // btn_underLine
             // 
@@ -199,6 +232,7 @@
             this.btn_underLine.TabIndex = 3;
             this.btn_underLine.Text = "U";
             this.btn_underLine.UseVisualStyleBackColor = true;
+            this.btn_underLine.Click += new System.EventHandler(this.btn_bold_Click);
             // 
             // btn_bold
             // 
@@ -210,6 +244,7 @@
             this.btn_bold.TabIndex = 3;
             this.btn_bold.Text = "B";
             this.btn_bold.UseVisualStyleBackColor = true;
+            this.btn_bold.Click += new System.EventHandler(this.btn_bold_Click);
             // 
             // label3
             // 
@@ -234,10 +269,11 @@
             this.nup_size.Size = new System.Drawing.Size(53, 27);
             this.nup_size.TabIndex = 2;
             this.nup_size.Value = new decimal(new int[] {
-            1,
+            12,
             0,
             0,
             0});
+            this.nup_size.ValueChanged += new System.EventHandler(this.nup_size_ValueChanged);
             // 
             // label2
             // 
@@ -248,15 +284,6 @@
             this.label2.Size = new System.Drawing.Size(53, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "Size";
-            // 
-            // cbx_fonts
-            // 
-            this.cbx_fonts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbx_fonts.FormattingEnabled = true;
-            this.cbx_fonts.Location = new System.Drawing.Point(178, 88);
-            this.cbx_fonts.Name = "cbx_fonts";
-            this.cbx_fonts.Size = new System.Drawing.Size(151, 28);
-            this.cbx_fonts.TabIndex = 1;
             // 
             // label1
             // 
@@ -277,6 +304,18 @@
             this.rtbx_text.Text = "";
             this.rtbx_text.TextChanged += new System.EventHandler(this.rtbx_text_TextChanged);
             // 
+            // btn_selecFont
+            // 
+            this.btn_selecFont.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selecFont.Font = new System.Drawing.Font("Agency FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn_selecFont.Location = new System.Drawing.Point(223, 86);
+            this.btn_selecFont.Name = "btn_selecFont";
+            this.btn_selecFont.Size = new System.Drawing.Size(66, 30);
+            this.btn_selecFont.TabIndex = 16;
+            this.btn_selecFont.Text = "Select";
+            this.btn_selecFont.UseVisualStyleBackColor = true;
+            this.btn_selecFont.Click += new System.EventHandler(this.btn_selecFont_Click);
+            // 
             // WolfRW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -291,6 +330,7 @@
             this.Name = "WolfRW";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "WolfRW";
+            this.Load += new System.EventHandler(this.WolfRW_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nup_size)).EndInit();
@@ -301,12 +341,10 @@
         #endregion
 
         private GroupBox groupBox1;
-        private ComboBox cbx_fonts;
         private Label label1;
         private Label label2;
         private Button btn_save;
         private Button btn_load;
-        private ComboBox cbx_colors;
         private Label label5;
         private Button btn_AlgRight;
         private Button btn_AlgCenter;
@@ -319,5 +357,9 @@
         private NumericUpDown nup_size;
         private RichTextBox rtbx_text;
         private Button btn_saveas;
+        private Button btn_color;
+        private Button btn_selectColor;
+        private Button btn_selectColorAll;
+        private Button btn_selecFont;
     }
 }
