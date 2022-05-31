@@ -1,6 +1,6 @@
 ﻿namespace WinFormsLesson5.WordPadKiller
 {
-    partial class MysStat
+    partial class WolfWR
     {
         /// <summary>
         /// Required designer variable.

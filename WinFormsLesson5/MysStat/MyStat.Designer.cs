@@ -30,38 +30,32 @@
         {
             this.studentuc1 = new WinFormsLesson5.MysStat.StudentUC();
             this.studentuc2 = new WinFormsLesson5.MysStat.StudentUC();
-            this.studentuc3 = new WinFormsLesson5.MysStat.StudentUC();
             this.SuspendLayout();
             // 
             // studentuc1
             // 
-            this.studentuc1.Location = new System.Drawing.Point(12, 12);
+            this.studentuc1.Location = new System.Drawing.Point(10, 9);
+            this.studentuc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentuc1.Name = "studentuc1";
-            this.studentuc1.Size = new System.Drawing.Size(1105, 122);
+            this.studentuc1.Size = new System.Drawing.Size(967, 92);
             this.studentuc1.TabIndex = 0;
             // 
             // studentuc2
             // 
-            this.studentuc2.Location = new System.Drawing.Point(12, 140);
+            this.studentuc2.Location = new System.Drawing.Point(10, 105);
+            this.studentuc2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentuc2.Name = "studentuc2";
-            this.studentuc2.Size = new System.Drawing.Size(1105, 127);
+            this.studentuc2.Size = new System.Drawing.Size(967, 95);
             this.studentuc2.TabIndex = 1;
-            // 
-            // studentuc3
-            // 
-            this.studentuc3.Location = new System.Drawing.Point(12, 273);
-            this.studentuc3.Name = "studentuc3";
-            this.studentuc3.Size = new System.Drawing.Size(1107, 148);
-            this.studentuc3.TabIndex = 2;
             // 
             // MyStat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 450);
-            this.Controls.Add(this.studentuc3);
+            this.ClientSize = new System.Drawing.Size(990, 214);
             this.Controls.Add(this.studentuc2);
             this.Controls.Add(this.studentuc1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MyStat";
             this.Text = "MysStat";
             this.ResumeLayout(false);
@@ -72,6 +66,5 @@
 
         private StudentUC studentuc1;
         private StudentUC studentuc2;
-        private StudentUC studentuc3;
     }
 }
